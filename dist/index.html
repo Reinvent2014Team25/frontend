@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./bower_components/animate.css/animate.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script type="text/javascript">
+  function onVisaCheckoutReady(){
+  V.init( {
+   apikey: "6YHGKX3C0IT7FYK52MDH13F4q28Pj1yIA_RJjYo9kbDzN1s8s",
+   paymentRequest:{
+    currencyCode: "USD",
+    total: "10.00"
+  }
+  });
+V.on("payment.success", function(payment)
+  {
+      alert("Payment Successfull"); 
+  });
+V.on("payment.cancel", function(payment)
+  {alert("Payment cancelled") });
+V.on("payment.error", function(payment, error)
+  {alert("Payment failed") });
+}
+  </script>
+  </head>
+
+  <body ng-app="onionApp">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        
+      </div>
+    </nav>
+      
+      <div class="container" ng-view=""></div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./public/bower_components/jquery/jquery.js"></script>
+    <script src="./public/bower_components/angular/angular.js"></script>
+    <script src="./public/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./public/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="./public/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="./public/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="./public/bower_components/angular-route/angular-route.js"></script>
+    <script src="./publicbower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="./public/scripts/app.js"></script>
+        <script src="./public/scripts/controllers/main.js"></script>
+        <script src="./public/scripts/controllers/home.js"></script>
+        
+        <!-- endbuild -->
+        <script type="text/javascript"
+src="https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/integration/v1/sdk.js">
+</script>
+</html>
