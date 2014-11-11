@@ -12,6 +12,9 @@ angular.module('onionApp', [
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
       })
+      .when('/about', {
+        templateUrl: 'views/about.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
