@@ -36,9 +36,9 @@ V.on("payment.success", function(payment)
       alert("Payment Successfull"); 
   });
 V.on("payment.cancel", function(payment)
-  {alert(JSON.stringify(payment)); });
+  {alert("Payment cancelled") });
 V.on("payment.error", function(payment, error)
-  {alert(JSON.stringify(error)); });
+  {alert("Payment failed") });
 }
   </script>
   </head>
@@ -56,17 +56,7 @@ V.on("payment.error", function(payment, error)
           </button>
           <a class="navbar-brand" href="#">Project name</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+        
       </div>
     </nav>
       
