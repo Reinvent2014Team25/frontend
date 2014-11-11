@@ -100,7 +100,13 @@ V.on("payment.error", function(payment, error)
         <script src="scripts/controllers/home.js"></script>
         
         <!-- endbuild -->
-        <script type="text/javascript"
-src="https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/integration/v1/sdk.js">
-</script>
+        <script type="text/javascript" src="https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/integration/v1/sdk.js"></script>
+        <script type="text/javascript">
+$(function() {
+  setTimeout(function(){var a=document.createElement("script");
+  var b=document.getElementsByTagName("script")[0];
+  a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0027/1429.js?"+Math.floor(new Date().getTime()/3600000);
+  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+});
+</script> 
 </html>
