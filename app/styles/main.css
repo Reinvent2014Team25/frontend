@@ -76,4 +76,9 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+  
+}
+
+.col-md-4{
+    width: 100% !important;
 }
