@@ -19,11 +19,30 @@
         <input id="userFirstName" type="text" class="form-control ng-pristine ng-valid" ng-model="eventName" autofocus="">
       </div>
     </div>
+    <div class="form-group">
+      <label for="userEventName" class="col-sm-2 control-label">Price</label>
+        <span class="glyphicon glyphicon-gbp"></span>14.99
+      
+    </div>
+    <div class="form-group">
+        Send marketing information
+        <input type="checkbox" ng-model="value1">
+    </div>
     <img alt="Visa Checkout" class="v-button" role="button" 
 src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png"/>
 <script type="text/javascript" 
 src="https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/integration/v1/sdk.js">
 </script>
+<script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=L8LYTQDG4MMGU" 
+   data-button="buynow" 
+   data-name="Race Registration" 
+   data-amount="14.99" 
+   data-currency="GBP" 
+   data-shipping="0.00" 
+   data-tax="0.00" 
+   data-callback="http://www.cruk1.org/signup-completed.html" 
+   data-env="sandbox"
+></script>
     
     <br>
 <!--    <div class="form-group">
