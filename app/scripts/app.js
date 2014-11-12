@@ -18,6 +18,9 @@ angular.module('onionApp', [
       .when('/search', {
         templateUrl: 'views/search.html'
       })
+      .when('/signup-completed', {
+        templateUrl: 'views/signup-completed.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
