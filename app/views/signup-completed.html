@@ -1,0 +1,43 @@
+<div class="jumbotron" id="completed-signup">
+<script>
+    function postLike() {
+      var fbAppId = '1033163786709292';
+  var objectToLike = 'http://raceforlife.cancerresearchuk.org/index.html';  
+    FB.api(
+       'https://graph.facebook.com/me/og.likes',
+       'post',
+       { object: objectToLike,
+         privacy: {'value': 'SELF'} },
+       function(response) {
+         if (!response) {
+           alert('Error occurred.');
+         } else if (response.error) {
+           document.getElementById('result').innerHTML =
+             'Error: ' + response.error.message;
+         } else {
+           document.getElementById('result').innerHTML =
+             '<a href=\"https://www.facebook.com/me/activity/' +
+             response.id + '\">' +
+             'Story created.  ID is ' +
+             response.id + '</a>';
+         }
+       }
+    );
+  }
+
+$(function() {
+  $jt = $('#completed-signup');
+  $button = $('<button id="facebook">Share on Facebook</button>').click(postLike);
+  $jt.append($button);
+});
+</script>
+<div
+  class="fb-login-button"
+  data-show-faces="true"
+  data-width="200"
+  data-max-rows="1"
+  data-scope="publish_actions">
+</div>
+
+<div id="result"></div>
+</div>
