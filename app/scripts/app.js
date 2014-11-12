@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('onionApp', [
+var app = angular.module('onionApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -25,3 +25,15 @@ angular.module('onionApp', [
         redirectTo: '/'
       });
   });
+  
+  
+  app.run(['$rootScope',  function ($rootScope) {
+        
+        
+        
+        $rootScope.email = "";
+        
+        
+        
+        
+}]);

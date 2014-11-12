@@ -3,15 +3,28 @@
 angular.module('onionApp' )
   .controller('SearchCtrl', function ($scope , $http , $location) {
     
-    $scope.nearByEvents = false;
-    
-    $scope.searchForEvents= function(eventName) { 
-        console.log(eventName);
-        $http({method: 'GET',
+    $http({method: 'GET',
             url: 'http://ec2-54-67-12-2.us-west-1.compute.amazonaws.com/api/events'
             
         }).success(function(data, status, headers, config) {
             $scope.nearByEvents = true;
+            $scope.events = data;
+//            console.log(data);
+        }).error(function(data, status, headers, config) {
+            console.log(status);
+            console.log(data);
+                
+        });
+    
+    
+    $scope.searchForEvents= function(eventName) { 
+        console.log(eventName);
+        $http({method: 'GET',
+            url: 'http://ec2-54-67-12-2.us-west-1.compute.amazonaws.com/api/events?name='+eventName
+            
+        }).success(function(data, status, headers, config) {
+            $scope.nearByEvents = true;
+            $scope.events = [];
             $scope.events = data;
 //            console.log(data);
         }).error(function(data, status, headers, config) {

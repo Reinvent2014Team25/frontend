@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('onionApp' )
-  .controller('HomeCtrl', function ($scope , $routeParams) {
+  .controller('HomeCtrl', function ($rootScope ,$scope , $routeParams) {
     
     $scope.eventName = $routeParams.eventName;
     

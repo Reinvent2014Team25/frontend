@@ -34,6 +34,7 @@
 V.on("payment.success", function(payment)
   {
 //      alert("Payment Successfull"); 
+       console.log($rootScope.email);
       window.location = "#/signup-completed";
   });
 V.on("payment.cancel", function(payment)
