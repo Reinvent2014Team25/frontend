@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="images/cruk.png">
 
     <title>Cancer research of UK</title>
 
@@ -45,7 +45,7 @@ V.on("payment.error", function(payment, error)
 
   <body ng-app="onionApp">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<!--    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -59,14 +59,12 @@ V.on("payment.error", function(payment, error)
         
       </div>
     </nav>
-      
+      -->
       <div class="container" ng-view=""></div>
 
       <hr>
 
-      <footer>
-        <p>&copy; Company 2014</p>
-      </footer>
+     
     </div> <!-- /container -->
 
 
@@ -81,6 +79,8 @@ V.on("payment.error", function(payment, error)
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!--    <script src="bower_components/stripe-angular/stripe-angular.js"></script>-->
+    
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -88,6 +88,8 @@ V.on("payment.error", function(payment, error)
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/search.js"></script>
+        
         
         <!-- endbuild -->
         <script type="text/javascript"

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('onionApp')
+angular.module('onionApp' )
   .controller('HomeCtrl', function ($scope) {
     $scope.events = [
      {name:'Hyde park', date:'25th May' , time :'9am'},
@@ -9,4 +9,13 @@ angular.module('onionApp')
       {name:'Finsburg park', date:'3rd June' ,time :'1pm'},
       {name:'Enfield London', date:'20th June', time :'1pm'}
     ];
+    
+    
+    $scope.saveaccount= function() { 
+        
+    }
+//    $scope.saveCustomer = function(status, response) {
+//        $rootScope.user.stripeCustomerId = response.id;
+//        $rootScope.user.save();
+//    };
   });

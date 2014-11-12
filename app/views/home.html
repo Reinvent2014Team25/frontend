@@ -10,25 +10,13 @@
     <div class="form-group">
       <label for="email" class="col-sm-2 control-label">Email</label>
       <div class="col-sm-10">
-        <input id="userLastName" type="text" class="form-control ng-pristine ng-valid" placeholder="Email" ng-model="user.lastname">
+        <input id="userEmail" type="text" class="form-control ng-pristine ng-valid" placeholder="Email" ng-model="user.lastname">
       </div>
     </div>
     <div class="form-group">
+      <label for="userEventName" class="col-sm-2 control-label">Event</label>
       <div class="col-sm-10">
-    <table class="table table-striped table-hover " border="1">
-        <thead>
-            <th>Event Name</th>
-            <th>Date</th>
-            <th>Time</th>
-            </thead>
-            <tbody>
-            <tr ng-repeat="event in events" >
-                <td>{{ event.name }}</td>
-                <td>{{ event.date}}</td>
-                <td>{{ event.time }}</td>
-            </tr>
-            </tbody>
-        </table>
+        <input id="userFirstName" type="text" class="form-control ng-pristine ng-valid" ng-model="eventName" autofocus="">
       </div>
     </div>
     <img alt="Visa Checkout" class="v-button" role="button" 
